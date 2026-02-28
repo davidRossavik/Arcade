@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #40E0D0, #006994);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crabjumper.controllers.GameController">
+   <children>
+      <Canvas fx:id="gameCanvas" height="700.0" width="700.0" />
+      <Pane fx:id="gameOverOverlay" layoutX="150.0" layoutY="150.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #cc6600, #993300);">
+         <children>
+            <ImageView fx:id="gameOverCrab" fitHeight="127.0" fitWidth="291.0" layoutX="77.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Fish.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="22.0" layoutY="18.0" prefHeight="78.0" prefWidth="356.0" text="Game Over" textAlignment="CENTER">
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="52.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.15141956437649418" endY="0.35962142553239224" startX="0.1482649894918929" startY="0.8328075574399544">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8299999833106995" green="0.44405001401901245" blue="0.08299999684095383" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9529411792755127" green="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Button fx:id="MainMenuButton" layoutX="22.0" layoutY="308.0" mnemonicParsing="false" onAction="#goToMainMenu" prefHeight="60.0" prefWidth="160.0" style="-fx-background-color: #FF9913;" text="      Main Menu" textAlignment="CENTER" textFill="#f3ff00">
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="RestartButton" layoutX="218.0" layoutY="309.0" mnemonicParsing="false" onAction="#restartGame" prefHeight="60.0" prefWidth="160.0" style="-fx-background-color: #FF9913;" text="     Restart" textFill="#f3ff00">
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label fx:id="scoreLabel" layoutX="70.0" layoutY="223.0" text="Score: xx">
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="44.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.15141956437649418" endY="0.35962142553239224" startX="0.1482649894918929" startY="0.8328075574399544">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8299999833106995" green="0.44405001401901245" blue="0.08299999684095383" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9529411792755127" green="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="225.0" layoutY="316.0" onMouseClicked="#restartGame" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/restart.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="29.0" layoutY="323.0" onMouseClicked="#goToMainMenu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/CrabHomeIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

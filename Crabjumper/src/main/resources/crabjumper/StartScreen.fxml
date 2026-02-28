@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #40E0D0, #006994); -fx-background-size: cover; -fx-text-fill: white;" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crabjumper.controllers.StartScreenController">
+   <children>
+      <Label layoutX="29.0" layoutY="101.0" text="Crab Jumper">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="80.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.11356467553869783" endY="0.5205047559286894" startX="0.11356468005135233" startY="0.9684543323817689">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8399999737739563" green="0.4585810899734497" blue="0.07559999823570251" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9510217905044556" green="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ListView fx:id="highScoreList" layoutX="395.0" layoutY="286.0" prefHeight="190.0" prefWidth="250.0" styleClass="highscore-list" />
+      <Label layoutX="432.0" layoutY="224.0" prefHeight="50.0" prefWidth="175.0" text="Highscores">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.11356467553869783" endY="0.5205047559286894" startX="0.11356468005135233" startY="0.9684543323817689">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8399999737739563" green="0.4585810899734497" blue="0.07559999823570251" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9510217905044556" green="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="85.0" layoutY="224.0" prefHeight="50.0" prefWidth="187.0" text="Crab name">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.11356467553869783" endY="0.5205047559286894" startX="0.11356468005135233" startY="0.9684543323817689">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8399999737739563" green="0.4585810899734497" blue="0.07559999823570251" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9510217905044556" green="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="nameInput" alignment="CENTER" layoutX="67.0" layoutY="286.0" prefHeight="44.0" prefWidth="207.0" promptText="your name" style="-fx-background-color: #FFAD00; -fx-text-fill: yellow;">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </TextField>
+      <Button fx:id="play" layoutX="98.0" layoutY="407.0" mnemonicParsing="false" onAction="#switchToGame" style="-fx-background-color: #FF9913;" text="Play" textFill="#f7ff03">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="36.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="37.0" fitWidth="700.0" layoutY="687.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/OceanFloor2.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="136.0" fitWidth="120.0" layoutX="85.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: transparent;">
+         <image>
+            <Image url="@images/Crab.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="254.0" layoutX="420.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Fish.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+.list-view .scroll-bar:horizontal,
+.list-view .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+.highscore-list {
+    -fx-background-color: #FFAD00;
+    -fx-control-inner-background: #FFAD00;
+    -fx-font-family: "Gill Sans Ultra Bold";
+    -fx-font-size: 20px;
+}
+
+.highscore-list .list-cell {
+    -fx-text-fill: #f7ff03;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: #f7ff03;
+}
