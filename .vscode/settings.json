@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "WindowToturial/src",
+        "Snake/src",
+        "PlatformGame/src",
+        "Project-Object/src/main/java/crabjumper"
+    ]
+}
